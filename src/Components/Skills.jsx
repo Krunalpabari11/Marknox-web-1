@@ -19,7 +19,7 @@ export const Skills = () => {
             {skills.map((skill, index) => {
               return (
                 <div className="max-h-xs" key={index}>
-                  <img src={skill.image} alt="" />
+                  <img src={skill.image} alt="" height={109} width={96}/>
                 </div>
               );
             })}

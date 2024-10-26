@@ -8,8 +8,8 @@ export const Header = () => {
   return (
     <header className="h-20 flex bg-primary items-center fixed top-0 w-full text-white z-10">
       <div className="container mx-auto h-full flex items-center justify-center lg:justify-between">
-        <img src={logoBigWhite} className="w-1/4 hidden md:block lg:block" />
-        <img src={glasses} className="w-1/4 lg:hidden md:hidden sm:block" />
+        <img src={glasses} className="w-1/4 hidden md:block lg:block" />
+
         <NavBar />
         <Socials />
       </div>

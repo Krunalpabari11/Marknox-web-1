@@ -45,14 +45,14 @@ export const Contact = () => {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={animation}
         >
-          <div className="flex flex-col pt-12 gap-y-8 lg:gap-x-8 lg:flex-row">
+          <div className="flex flex-col mt-12 pt-12 gap-y-8 lg:gap-x-8 lg:flex-row">
             <div className="flex flex-col">
               <h1 className="section-title text-md font-semibold underline  text-fuchsia-800">
                 Contact me
               </h1>
               <p className="text-lg text-gray-200 font-normal mt-4 max-w-md">
                 Submit the form below or send me an email at
-                bhuyanpartha2001@gmail.com
+                krunalpabari11@gmail.com
               </p>
             </div>
             <form

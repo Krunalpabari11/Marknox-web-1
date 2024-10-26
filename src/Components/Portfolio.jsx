@@ -9,47 +9,46 @@ import { inViewHandler } from "../animationHandler";
 import { motion, useAnimation } from "framer-motion";
 import { InView } from "react-intersection-observer";
 
+import InternshipSection from "./InternshipSection";
+import ProjectSection from "./ProjectSection";
 const Portfolio = () => {
   const animation = useAnimation();
-  const portfolios = [
+  const internships = [
     {
-      id: 1,
-      src: sort,
-      link: "https://sorting-visualizer-react-tailwind.netlify.app/",
-      repo: "https://github.com/Novice1414/Sorting-Visualizer",
+      title: "Frontend Intern",
+      company: "SETU",
+      duration: "MAY 2024 - JULY 2024",
+      description: "Worked on development of Freelancer Marketplace \n Integrated Stripe API for payment gateway.",
     },
     {
-      id: 2,
-      src: linkedin,
-      link: "https://linkedin-clone-yt-aea8f.web.app/",
-      repo: "https://github.com/Novice1414/Linkedin--clone",
+      title: "Frontend  Intern",
+      company: "Across The Globe",
+      duration: "AUG 2023 - SEP 2023",
+      description: "Worked on the creation of Collabrative and Communcative Educational Portal",
     },
     {
-      id: 3,
-      src: redlife,
-      link: "https://apodbyrahul.netlify.app/",
-      repo: "https://github.com/Novice1414/RedLife",
+      title: "Software Developer Intern",
+      company: "Cargar",
+      duration: "FEB 2023 - JUNE 2023",
+      description: "Led the development of an intitutive website, ensuring full responsiveness and user-friendly experience.",
     },
   ];
 
-  const design = [
+  const projects = [
     {
-      id: 1,
-      src: nptel,
-      link: "https://www.figma.com/file/QUKPpgK3pHPSVpxYNZPCrB/UI-UX-Track--NPTEL-APP?type=design&node-id=443%3A2315&mode=design&t=D35dIJmms8iPWPYY-1",
-      repo: "https://www.figma.com/file/QUKPpgK3pHPSVpxYNZPCrB/UI-UX-Track--NPTEL-APP?type=design&node-id=443%3A2315&mode=design&t=D35dIJmms8iPWPYY-1",
+      title: "Real Time Exam Proctoring",
+      description: "A real-time exam proctoring system featuring webcam monitoring, facial recognition, screen recording, and behavior analysis.",
+      githubUrl: "https://github.com/Krunalpabari11/Real-time-exam-proctoring",
     },
     {
-      id: 2,
-      src: netflix,
-      link: "https://www.behance.net/gallery/125413959/Netflix-Redesign",
-      repo: "https://www.behance.net/gallery/125413959/Netflix-Redesign",
+      title: "Web-Flow Automation",
+      description: "A drag-and-drop automation platform integrating multiple services (Google Drive, Slack, Discord) with secure authentication and real-time notifications.",
+      githubUrl: "https://github.com/Krunalpabari11/saas-automation",
     },
     {
-      id: 3,
-      src: efficacy,
-      link: "https://play.google.com/store/apps/details?id=com.efficacyuser.app&hl=en_IN&gl=US",
-      repo: "https://www.figma.com/file/71BsmQf9aOdwIq8ivcm9Tm/efficacy-user?type=design&node-id=0%3A1&mode=design&t=rPa15qrMD2jhDtdX-1",
+      title: "Chat Application",
+      description: "A decentralized real-time communication platform built with Next.js and Socket.io featuring instant messaging capabilities.",
+      githubUrl: "https://github.com/Krunalpabari11/HiFi",
     },
   ];
 
@@ -61,89 +60,17 @@ const Portfolio = () => {
       <InView onChange={(inview) => inViewHandler(inview, animation)}>
         <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
           <div className="pb-8">
-            <h1 className="font-semibold text-fuchsia-800 text-md underline">
-              Portfolio
-            </h1>
-            <p className="text-2xl lg:text-xl font-regular lg:font-extrabold mb-3 py-5">
-              Some of my recent work
-            </p>
+            
           </div>
-
-          <motion.div
-            className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0"
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={animation}
-          >
-            {portfolios.map(({ id, src, link, repo }) => (
-              <div
-                key={id}
-                className="shadow-md bg-[#011221] border-[#1E2D3D] rounded-lg"
-              >
-                <img
-                  src={src}
-                  alt="projects"
-                  className="rounded-md w-full h-[200px] duration-200 hover:scale-105"
-                />
-                <div className="flex items-center justify-center">
-                  <button
-                    className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105"
-                    onClick={() => window.open(link, "_blank")}
-                  >
-                    Demo
-                  </button>
-                  <button
-                    className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105"
-                    onClick={() => window.open(repo, "_blank")}
-                  >
-                    GitHub
-                  </button>
-                </div>
-              </div>
-            ))}
-          </motion.div>
+          <InternshipSection internships={internships} />
         </div>
       </InView>
 
       <InView onChange={(inview) => inViewHandler(inview, animation)}>
         <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
           <div className="pb-8">
-            <p className="text-2xl lg:text-xl font-regular lg:font-extrabold mb-3 py-5">
-              Some of my recent design
-            </p>
           </div>
-
-          <motion.div
-            className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0"
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={animation}
-          >
-            {design.map(({ id, src, link, repo }) => (
-              <div
-                key={id}
-                className="shadow-md bg-[#011221] border-[#1E2D3D] rounded-lg"
-              >
-                <img
-                  src={src}
-                  alt="projects"
-                  className="rounded-md w-full h-[200px] duration-200 hover:scale-105"
-                />
-                <div className="flex items-center justify-center">
-                  <button
-                    className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105"
-                    onClick={() => window.open(link, "_blank")}
-                  >
-                    Link
-                  </button>
-                  <button
-                    className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105"
-                    onClick={() => window.open(repo, "_blank")}
-                  >
-                    Figma
-                  </button>
-                </div>
-              </div>
-            ))}
-          </motion.div>
+          <ProjectSection projects={projects} />
         </div>
       </InView>
     </div>

@@ -1,7 +1,6 @@
 import React from "react";
 import { Socials } from "./Socials";
-import logoBigWhite from "../assets/img/logos/logoBigWhite.svg";
-
+import glasses from "../assets/img/logos/glasses.svg";
 export const Footer = () => {
   return (
     <footer className="bg-primary py-12 items-center">
@@ -10,9 +9,9 @@ export const Footer = () => {
           <div className="flex space-x-6">
             <Socials />
           </div>
-          <img className="w-1/4" src={logoBigWhite} />
+          <img className="w-1/4" src={glasses} />
           <p className="text-white text-sm font-normal">
-            Created by @parthapbhuyan
+            Created by @KrunalPabari
           </p>
         </div>
       </div>

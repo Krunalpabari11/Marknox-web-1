@@ -28,10 +28,10 @@ export const Hero = () => {
 
                 <div className="text-content">
                   <h1 className="text-4xl lg:text-5xl pb-4 font-bold">
-                    Hey I'm <span className="text-fuchsia-800">Partha</span>
+                    Hey I'm <span className="text-fuchsia-800">Krunal</span>
                   </h1>
                   <p className="pb-4 max-w-[480px] text-lg text-left">
-                    A passionate UI/UX designer and full stack developer
+                    A Passionate Software Developer
                   </p>
                   <img
                     src={glasses}
